@@ -17,7 +17,7 @@
            "FunctionName" : "delete_me_lambda",
            "Handler" : "hello.handler",
            "Role" : {"GetAtt": ["delte_me_lamdba_role", "Arn"]},
-           "Runtime" : "python3.7",
+           "Runtime" : "python3.7"
          }
      },
     "delete_me_lambda_role":{
@@ -31,6 +31,7 @@
             },
           "Policies" : [
           ]
+        }
     }
   }
 }
