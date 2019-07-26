@@ -7,3 +7,4 @@ phases:
   build:
     commands:
       - echo 'hello'
+      - aws s3 cp code/ s3://delte_me_please_1234/nested_templates --recursive --metadata GIT_SHA=$CODEBUILD_SOURCE_VERSION
