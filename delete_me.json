@@ -16,7 +16,7 @@
            },
            "FunctionName" : "delete_me_lambda",
            "Handler" : "hello.handler",
-           "Role" : { "Fn::GetAtt": [ "delte_me_lamdba_role", "Arn" ] },
+           "Role" : { "Fn::GetAtt": [ "DeleteMeLambdaRole", "Arn" ] },
            "Runtime" : "python3.7"
          }
      },
