@@ -2,12 +2,35 @@
    "AWSTemplateFormatVersion":"2010-09-09",
    "Description": "",
    "Parameters":{
-    "AccessTag": {
+    "parameter1": {
       "Type": "String",
-      "Default": "ANADEVPACA"
+      "Default": "string"
       }
    },
    "Resources":{
-
+     "delete_me_lambda": {
+       "Type" : "AWS::Lambda::Function",
+       "Properties" : {
+           "Code" : {
+             "S3Bucket": "delete-me-please-1234"
+           },
+           "FunctionName" : "delete_me_lambda",
+           "Handler" : "hello.handler",
+           "Role" : {"GetAtt": ["delte_me_lamdba_role", "Arn"]},
+           "Runtime" : "python3.7",
+         }
+     },
+    "delete_me_lambda_role":{
+      "Type" : "AWS::IAM::Role",
+      "Properties" : {
+          "AssumeRolePolicyDocument" : {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [ "lambda.amazonaws.com" ]
+              }
+            },
+          "Policies" : [
+          ]
+    }
   }
 }
