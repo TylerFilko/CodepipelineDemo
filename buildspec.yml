@@ -7,4 +7,4 @@ phases:
   build:
     commands:
       - echo 'hello'
-      - aws s3 cp code/ s3://delte-me-please-1234 --recursive --metadata GIT_SHA=$CODEBUILD_SOURCE_VERSION
+      - aws s3 cp code/ s3://delete-me-please-1234 --recursive --metadata GIT_SHA=$CODEBUILD_SOURCE_VERSION
