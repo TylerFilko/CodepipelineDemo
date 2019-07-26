@@ -30,6 +30,11 @@
               }
             },
           "Policies" : [
+            {
+              "Effect": "Allow",
+              "Action": "s3:*",
+              "Resource": "arn:aws:s3:::delete-me-please-1234*"
+            }
           ]
         }
     }
