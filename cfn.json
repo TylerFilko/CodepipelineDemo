@@ -40,7 +40,7 @@
     "DeleteMeLambda": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
-        "Handler": "hello.handler",
+        "Handler": "code.src.handler",
         "Description": "AWS IAM user verification",
         "Runtime": "python3.6",
         "Timeout": 100,
@@ -50,6 +50,6 @@
           "S3Key": {"Fn::Sub" : "deploy_pkg.zip"}
         }
       }
-    },
+    }
   }
 }
