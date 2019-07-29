@@ -40,14 +40,14 @@
     "DeleteMeLambda": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
-        "Handler": "src.handler",
+        "Handler": "hello.handler",
         "Description": "AWS IAM user verification",
         "Runtime": "python3.6",
         "Timeout": 100,
         "Role": { "Fn::GetAtt" : ["DeleteMeRole", "Arn"]},
         "Code": {
           "S3Bucket": {"Fn::Sub" : "delete-me-please-1234"},
-          "S3Key": {"Fn::Sub" : "deploy_pkg.zip"}
+          "S3Key": {"Fn::Sub" : "hello.zip"}
         }
       }
     },
