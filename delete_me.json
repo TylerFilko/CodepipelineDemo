@@ -28,7 +28,7 @@
               "Principal": {
                 "Service": [ "lambda.amazonaws.com" ]
               }
-            },
+          },
           "Policies" : [
             {
             "PolicyName": "deleteMe",
@@ -36,11 +36,12 @@
               "Version": "2012-10-17",
               "Statement": [
                 {
-              "Effect": "Allow",
-              "Action": "s3:*",
-              "Resource": "arn:aws:s3:::delete-me-please-1234*"
-              }
-            ]
+                  "Effect": "Allow",
+                  "Action": "s3:*",
+                  "Resource": "arn:aws:s3:::delete-me-please-1234*"
+                }
+              ]
+            }
           }
         ]
       }
