@@ -1,2 +1,2 @@
-if __name__ == "___main__":
-  print('hi')
+def handler(event,context):
+    print('hi')

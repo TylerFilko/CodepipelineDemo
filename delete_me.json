@@ -36,6 +36,20 @@
           }
         ]
       }
-    }
+    },
+    "DeleteMeLambda": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Handler": "hello.handler",
+        "Description": "AWS IAM user verification",
+        "Runtime": "python3.6",
+        "Timeout": 100,
+        "Role": { "Fn::GetAtt" : ["DeleteMeRole", "Arn"]},
+        "Code": {
+          "S3Bucket": {"Fn::Sub" : "delete-me-please-1234"},
+          "S3Key": {"Fn::Sub" : "delete-me-please-1234/deploy_pkg.zip"}
+        }
+      }
+    },
   }
 }
