@@ -26,8 +26,9 @@
           "AssumeRolePolicyDocument" : {
               "Effect": "Allow",
               "Principal": {
-                "Service": [ "lambda.amazonaws.com" ]
-              }
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
           },
           "Policies" : [
             {
@@ -35,10 +36,14 @@
             "PolicyDocument": {
               "Version": "2012-10-17",
               "Statement": [
-                {
+                  {
                   "Effect": "Allow",
-                  "Action": "s3:*",
-                  "Resource": "arn:aws:s3:::delete-me-please-1234*"
+                  "Resource": "arn:aws:logs:*:*:*",
+                  "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ]
                 }
               ]
             }
