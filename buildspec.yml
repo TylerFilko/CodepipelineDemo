@@ -9,4 +9,4 @@ phases:
       - echo 'hello'
       - mkdir lambda_deployment_pkg
       - zip lambda_deployment_pkg/hello.zip code/__init__.py
-      - aws s3 cp lambda_deployment_pkg s3://delete-me-please-1234 --recursive --metadata GIT_SHA=$CODEBUILD_SOURCE_VERSION
+      - aws s3 cp lambda_deployment_pkg s3://mycodepiplinebucket --recursive --metadata GIT_SHA=$CODEBUILD_SOURCE_VERSION
