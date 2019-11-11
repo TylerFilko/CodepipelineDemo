@@ -8,7 +8,8 @@ cfn, then add a deploy step; if you want it to run awscli
 commands, just add to the build step.
 
 ## Pre-Reqs
-- An AWS account
+- (Github account)[https://github.com/TylerFilko/test_repo1/tree/master/codepipline_demo/Github_Howto.md]
+- (An AWS account)[https://github.com/TylerFilko/test_repo1/tree/master/codepipline_demo/AWS_Setup.md]
 - A user role with admin access
 - A role with admin access
 - A way to assume this role
